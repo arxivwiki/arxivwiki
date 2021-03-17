@@ -1,1 +1,1 @@
-document.getElementById("githublink").href += (window.location.pathname.substr(1) || "README.md");
+document.getElementById("githublink").href += ((window.location.pathname.substr(1) || "README") + ".md");

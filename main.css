@@ -12,9 +12,23 @@ a:hover {
     font-weight: inherit !important;
 }
 
+#search_input {
+    width:100%;
+}
+
+#searchbar {
+    position: absolute;
+    display: inline;
+    width: 15%;
+    max-width: 250px;
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-top: 20px;
+}
+
 .view {
     float:right;
-    padding-top: 16px;
+    padding-top: 26px;
 }
 
 .header {
