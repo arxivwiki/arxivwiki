@@ -5,14 +5,12 @@
         const id = window.location.pathname.split('/abs/')[1];
         const response = await fetch('https://export.arxiv.org/api/query?id_list=' + id);
         const data = await response.text();
-        // console.log(data);
         title = data.split("<title>")[1].split("</title>")[0].replace(/\n/g, ' ').replace(/ +/g, ' ');
         document.getElementById("paper_title").innerText = title;
 
         // abstract = data.split("<summary>")[1].split("</summary>")[0].replace(/\n/g, ' ').replace(/ +/g, ' ')
         // document.getElementById("paper_abstract").innerText = abstract;
 
-        console.log(data);
         authors = data.substring(data.indexOf("<author>"), data.lastIndexOf("</author>"))
                         .replace(/<arxiv:affiliation[^<]*<\/arxiv:affiliation>/g, '')
                         .replace(/<\/?author>/g, '').replace(/\n/g, ' ').replace(/ +/g, ' ')
