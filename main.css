@@ -1,0 +1,7 @@
+#titlelink {
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: dotted underline;
+}
