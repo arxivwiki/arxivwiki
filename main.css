@@ -1,7 +1,23 @@
 #titlelink {
     font-weight: normal;
+    font-size: 2.5em;
+}
+
+body {
+    font-size: 16px;
 }
 
 a:hover {
     text-decoration: dotted underline;
+    font-weight: inherit !important;
+}
+
+.view {
+    float:right;
+    padding-top: 16px;
+}
+
+.header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
 }
