@@ -28,7 +28,8 @@ a:hover {
 
 .view {
     float:right;
-    padding-top: 26px;
+    padding-top: 23px;
+    font-size: 20px;
 }
 
 .header {
