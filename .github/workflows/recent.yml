@@ -13,6 +13,6 @@ jobs:
           echo "id" > _data/recent.csv
       - name: get recently updated files
         run: |
-          git log --pretty=format: --name-only --since="7 days ago"  | grep -v -e '^$' | grep '/abs/' | rev | cut -c 4- | rev >> _data/recent.csv
+          git log --pretty=format: --name-only --since="7 days ago"  | grep -v -e '^$' | grep 'abs/' | rev | cut -c 4- | rev >> _data/recent.csv
   
       - uses: stefanzweifel/git-auto-commit-action@v4
