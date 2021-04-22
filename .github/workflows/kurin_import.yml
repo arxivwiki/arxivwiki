@@ -1,4 +1,4 @@
-name: find new paper notes from Vitaly Kurin
+name: kurin_import
 
 on:
   schedule:
