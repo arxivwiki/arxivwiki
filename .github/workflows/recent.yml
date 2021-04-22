@@ -1,12 +1,11 @@
-name: Get list of recent papers
+name: Get list of recent papers and update from Kurin's notes
 on:
   push:
     branches: [ main ]
 jobs:
-  date:
+  auto_update:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the branch
       - name: checkout
         uses: actions/checkout@v2-beta # use either @v2-beta or @master. Eventually there will be a @v2 tag.
         with:
@@ -17,5 +16,17 @@ jobs:
       - name: get recently updated files
         run: |
           git log --pretty=format: --name-only --since="7 days ago"  | grep -v -e '^$' | grep 'abs/' | rev | cut -c 4- | rev >> _data/recent.csv
+  
+      # kurin's notes
+      - name: Check changes
+        id: check-changes
+        uses: rdietrick/did-files-change@v1.2
+        with:
+          pathspec: pairs.txt
+
+      - name: Run
+        if: ${{ steps.check-changes.outputs.changed }}
+        run: |
+          echo "Changes detected in test directory: ${{ steps.check-changes.outputs.changed }}"
   
       - uses: stefanzweifel/git-auto-commit-action@v4
