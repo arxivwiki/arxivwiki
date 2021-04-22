@@ -1,4 +1,4 @@
-name: Mark stale issues and pull requests
+name: Import links to new papers from Vitaly Kurin
 
 on:
   schedule:
