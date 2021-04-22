@@ -2,7 +2,7 @@ name: Import links to new papers from Vitaly Kurin
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] 
 #   schedule:
 #   - cron: "10 10 * * *"
 
