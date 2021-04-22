@@ -1,7 +1,11 @@
-name: Get list of recent papers and update from Kurin's notes
+name: recent
 on:
   push:
     branches: [ main ]
+  workflow_run:
+    workflows: ["kurin_import"]
+    types:
+      - completed
 jobs:
   auto_update:
     runs-on: ubuntu-latest
