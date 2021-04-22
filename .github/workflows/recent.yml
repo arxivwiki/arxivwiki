@@ -25,8 +25,8 @@ jobs:
           pathspec: pairs.txt
 
       - name: Run
-        if: ${{ steps.check-changes.outputs.changed }}
+        if: steps.check-changes.outputs.changed == 1
         run: |
-          echo "Changes detected in test directory: ${{ steps.check-changes.outputs.changed }}"
+          python kurin_import.py
   
       - uses: stefanzweifel/git-auto-commit-action@v4
