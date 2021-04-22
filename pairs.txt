@@ -58,3 +58,4 @@ https://arxiv.org/abs/1806.01830,https://yobibyte.github.io/files/paper_notes/rd
 https://arxiv.org/abs/1806.01261,https://yobibyte.github.io/files/paper_notes/gn.pdf
 https://arxiv.org/abs/1806.05635,https://yobibyte.github.io/files/paper_notes/sil.pdf
 https://arxiv.org/abs/1802.08768,https://yobibyte.github.io/files/paper_notes/gen_cond.pdf
+https://arxiv.org/abs/1809.11044,https://yobibyte.github.io/files/paper_notes/rfm.pdf
