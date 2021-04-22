@@ -24,7 +24,7 @@ jobs:
         with:
           pathspec: pairs.txt
 
-      - name: Run
+      - name: Import from Kurin's notes
         if: steps.check-changes.outputs.changed == 1
         run: |
           python kurin_import.py
