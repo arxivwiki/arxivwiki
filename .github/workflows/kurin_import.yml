@@ -1,8 +1,6 @@
-name: Import links to new papers from Vitaly Kurin
+name: find new paper notes from Vitaly Kurin
 
 on:
-  push:
-    branches: [ main ]
   schedule:
   - cron: "23 2/6 * * *"
 
