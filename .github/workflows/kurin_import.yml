@@ -2,7 +2,7 @@ name: Import links to new papers from Vitaly Kurin
 
 on:
   schedule:
-  - cron: "31 10 * * *"
+  - cron: "23 2/6 * * *"
 
 jobs:
   kurin_import:
