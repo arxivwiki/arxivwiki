@@ -1,5 +1,7 @@
 name: Get list of recent papers
-on: push
+on:
+  push:
+    branches: [ main ]
 jobs:
   date:
     runs-on: ubuntu-latest
