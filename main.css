@@ -3,20 +3,21 @@
     font-size: 2.5em;
 }
 
-a {
+/* a {
     color: #1950ba;
-}
+} */
 
 body {
     font-size: 16px;
     color: black;
     padding: 20px;
-    background-color: #ada;
+    background-color: #ddc;
 }
 
 .wrapper {
     padding: 30px;
     background-color: white;
+    border: 2px solid black;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -28,9 +29,9 @@ a:hover {
     font-weight: inherit !important;
 }
 
-a:hover, a:focus {
+/* a:hover, a:focus {
     color: #8d10c6;
-}
+} */
 
 #search_input {
     width:100%;
