@@ -1,17 +1,17 @@
 #titlelink {
     font-weight: normal;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
-/* a {
+a {
     color: #1950ba;
-} */
+}
 
 body {
     font-size: 16px;
     color: black;
     padding: 20px;
-    background-color: #ddc;
+    background-color: #dadada;
 }
 
 .wrapper {
@@ -29,9 +29,9 @@ a:hover {
     font-weight: inherit !important;
 }
 
-/* a:hover, a:focus {
+a:hover, a:focus {
     color: #8d10c6;
-} */
+}
 
 #search_input {
     width:100%;
@@ -44,13 +44,13 @@ a:hover {
     max-width: 250px;
     padding-left: 5%;
     padding-right: 3%;
-    padding-top: 20px;
+    padding-top: 9px;
 }
 
 .view {
     float:right;
     padding-top: 23px;
-    font-size: 20px;
+    font-size: 10px;
 }
 
 .header {
