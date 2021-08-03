@@ -39,10 +39,8 @@ a:hover, a:focus {
 
 #searchbar {
     float: right;
-    width: 15%;
-    max-width: 250px;
-    padding-left: 5%;
-    padding-right: 3%;
+    min-width: 15%;
+    max-width: 300px;
     padding-top: 10px;
 }
 
