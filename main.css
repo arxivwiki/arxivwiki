@@ -4,7 +4,7 @@
 }
 
 a {
-    color: #1950ba;
+    color: #214b9d;
 }
 
 body {
@@ -38,8 +38,7 @@ a:hover, a:focus {
 }
 
 #searchbar {
-    position: absolute;
-    display: inline;
+    float: right;
     width: 15%;
     max-width: 250px;
     padding-left: 5%;
@@ -49,7 +48,7 @@ a:hover, a:focus {
 
 .view {
     float:right;
-    padding-top: 10px;
+    padding-top: 12px;
     font-size: 16px;
 }
 
