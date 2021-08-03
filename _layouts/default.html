@@ -27,7 +27,8 @@
         <p id="paper_details"></p>
         <p id="paper_abstract"></p>
         <hr/>
-        <div class="view"><a id="githublink" target="_blank" href="{{ site.github.repository_url }}/edit/main/">✍️ Edit this page</a></div>
+        {% capture full_url %}{{ site.github.repository_url  }}{{ page.urlsuffix | default: "/edit/main/" }}{% endcapture %}
+        <div class="view"><a id="githublink" target="_blank" href="{{ full_url }}">✍️ Edit this page</a></div>
       </div>
       {{ content }}
 
