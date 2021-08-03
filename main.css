@@ -44,13 +44,13 @@ a:hover, a:focus {
     max-width: 250px;
     padding-left: 5%;
     padding-right: 3%;
-    padding-top: 9px;
+    padding-top: 10px;
 }
 
 .view {
     float:right;
-    padding-top: 23px;
-    font-size: 10px;
+    padding-top: 10px;
+    font-size: 16px;
 }
 
 .header {
