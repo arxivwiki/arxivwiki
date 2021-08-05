@@ -13,3 +13,7 @@ Recently updated papers:
 {% for member in site.data.recent limit:5 %}
 [ {{ member.id }}]({{ member.id }})
 {% endfor %}
+
+Random page:
+{% assign random = site.data.all | sample %}
+[ {{ random.id }}]({{random.id }})
