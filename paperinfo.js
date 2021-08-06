@@ -20,9 +20,7 @@
         details = `<a href="https://arxiv.org/abs/${id}" target="_blank">https://arxiv.org/abs/${id}</p>`;
         document.getElementById("paper_details").innerHTML = details;
 
-        // add newlines to make the box the same size
-        newlines = "%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A";
-        document.getElementsByTagName("iframe")[0].src = "https://scitldr.apps.allenai.org/?q=" + encodeURIComponent(abstract) + newlines;
+        document.getElementsByTagName("iframe")[0].src = "https://scitldr.apps.allenai.org/?q=" + encodeURIComponent(abstract);
         document.getElementById("summarizer").style.display = ""
     }
 })()
