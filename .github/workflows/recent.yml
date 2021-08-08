@@ -26,6 +26,12 @@ jobs:
       - name: get all files
         run: |
           find abs/* | grep .md | sed 's/.md//' >> _data/all.csv
+      - name: set up contributors.csv
+        run: |
+          echo "id" > _data/contributors.csv
+      - name: get contributors
+        run: |
+          curl https://api.github.com/repos/arxivwiki/arxivwiki/contributors | jq .[].login | sed 's/"//g' >> _data/contributors.csv
 
       # kurin's notes
       - name: Check changes

@@ -17,3 +17,10 @@ Recently updated papers:
 Random page:
 {% assign random = site.data.all | sample %}
 [ {{ random.id }}]({{random.id }})
+
+Top 5 contributors:
+<ul>
+{% for c in site.data.contributors limit:5 %}
+<li><a target="_blank" href="https://github.com/{{ c.id }}">{{ c.id }}</a></li>
+{% endfor %}
+</ul>
