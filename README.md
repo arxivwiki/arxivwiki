@@ -9,14 +9,13 @@ If you'd like to contribute, search by an arXiv identifier, and click the "Edit 
 
 I hope this becomes a useful resource for all kinds of researchers, especially those getting started in a new field.
 
+<p><button id="randompage">Visit a random page</button></p>
+
 Recently updated papers:
 {% for member in site.data.recent limit:5 %}
 [ {{ member.id }}]({{ member.id }})
 {% endfor %}
 
-Random page:
-{% assign random = site.data.all | sample %}
-[ {{ random.id }}]({{random.id }})
 
 Top 5 contributors:
 <ul>
