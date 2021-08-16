@@ -28,15 +28,15 @@
           <p id="paper_abstract" style="display: none"></p>
           <hr />
           {% capture full_url %}{{ site.github.repository_url }}{{ page.urlsuffix | default: "/edit/main/" }}{% endcapture %}
-          <div class="view"><a id="githublink" target="_blank" href="{{ full_url }}">✍️ Edit this page</a></div>
+          <button class="view"><a id="githublink" target="_blank" href="{{ full_url }}">✍️ Edit this page</a></button>
       </div>
       {{ content }}
     </div>
 
     <div id='summarizer' style="display: none">
-      <br/>
+      <!-- <br/> -->
       <hr/>
-      <h4>Automatic abstract summarizer (by <a href="https://scitldr.apps.allenai.org/about" target="_blank">Allen AI</a>)</h4>
+      <button id='summarizerbutton'>Click to use automatic abstract summarizer</button> (by <a href="https://scitldr.apps.allenai.org/about" target="_blank">Allen AI</a>)
       <p>To use, scroll down and press the Submit button for a one-sentence summary of the abstract.</p>
       <div style="overflow: hidden; border: 1px solid black; width: 100%; height: 500px">
           <iframe src="" frameborder="0"  style="width:100%; height:100%; overflow-x:hidden;"></iframe>

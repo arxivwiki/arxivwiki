@@ -21,6 +21,23 @@
         document.getElementById("paper_details").innerHTML = details;
 
         document.getElementsByTagName("iframe")[0].src = "https://scitldr.apps.allenai.org/?q=" + encodeURIComponent(abstract);
-        document.getElementById("summarizer").style.display = ""
+        document.getElementById("summarizer").style.display = "";
+        document.getElementById("summarizer").style.height = "50px";
+        document.getElementById("summarizer").style.overflow = "hidden";
+        document.getElementById("summarizer").style.cursor = "pointer";
+        // document.getElementById("summarizer").style.border = "1px solid black";
+        // document.getElementById("summarizer").style.padding = "12px";
     }
 })()
+
+
+document.getElementById("summarizer").onclick = function() {
+    let buttonText = document.getElementById("summarizerbutton").innerText;
+    if (buttonText.indexOf("use") !== -1) {
+        this.style.height = 'auto';
+        document.getElementById("summarizerbutton").innerText = buttonText.replaceAll("use", "hide");
+    } else {
+        this.style.height = '50px';
+        document.getElementById("summarizerbutton").innerText = buttonText.replaceAll("hide", "use");
+    }
+}
