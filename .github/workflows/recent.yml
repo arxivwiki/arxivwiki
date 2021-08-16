@@ -2,10 +2,6 @@ name: recent
 on:
   push:
     branches: [ main ]
-  workflow_run:
-    workflows: ["kurin_import"]
-    types:
-      - completed
 jobs:
   auto_update:
     runs-on: ubuntu-latest
@@ -32,17 +28,5 @@ jobs:
       - name: get contributors
         run: |
           curl https://api.github.com/repos/arxivwiki/arxivwiki/contributors | jq .[].login | sed 's/"//g' >> _data/contributors.csv
-
-      # kurin's notes
-      - name: Check changes
-        id: check-changes
-        uses: rdietrick/did-files-change@v1.2
-        with:
-          pathspec: pairs.txt
-
-      - name: Import from Kurin's notes
-        if: steps.check-changes.outputs.changed == 1
-        run: |
-          python kurin_import.py
 
       - uses: stefanzweifel/git-auto-commit-action@v4
