@@ -63,3 +63,7 @@ hr {
 #summarizer {
     padding-top: 30px;
 }
+
+#randompage {
+    cursor: pointer;
+}

@@ -24,20 +24,21 @@
         document.getElementById("summarizer").style.display = "";
         document.getElementById("summarizer").style.height = "50px";
         document.getElementById("summarizer").style.overflow = "hidden";
-        document.getElementById("summarizer").style.cursor = "pointer";
         // document.getElementById("summarizer").style.border = "1px solid black";
         // document.getElementById("summarizer").style.padding = "12px";
     }
 })()
 
-
-document.getElementById("summarizer").onclick = function() {
-    let buttonText = document.getElementById("summarizerbutton").innerText;
+document.getElementById("summarizerbutton").onclick = function() {
+    let buttonText = this.innerText;
+    let div = document.getElementById("summarizer");
     if (buttonText.indexOf("use") !== -1) {
-        this.style.height = 'auto';
-        document.getElementById("summarizerbutton").innerText = buttonText.replaceAll("use", "hide");
+        div.style.height = 'auto';
+        this.innerText = buttonText.replaceAll("use", "hide");
     } else {
-        this.style.height = '50px';
-        document.getElementById("summarizerbutton").innerText = buttonText.replaceAll("hide", "use");
+        div.style.height = '50px';
+        this.innerText = buttonText.replaceAll("hide", "use");
     }
 }
+
+document.getElementById("summarizerbutton").style.cursor = "pointer";
