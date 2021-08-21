@@ -20,6 +20,15 @@ Recently updated papers:
 {% endfor %}
 </ul>
 
+<p>
+{% assign tagpages = site.pages | where:"dir", "/tag/" %}
+View papers by tag: <span>{% for p in tagpages %}
+{% assign tag_name = p.name | remove_first: '.md'%}
+- <code><a href="/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr></a>&nbsp;</code>
+{% endfor %}
+</span>
+</p>
+
 Want more? [View all papers on the arXiv.wiki](https://arxiv.wiki/all).
 
 ---
@@ -33,6 +42,13 @@ Files are written in Markdown. It is regular text with extra styling. Here is a 
 Files also support LaTeX math mode:
 * Wrap equations with \$\$ on each side, like `$$y = x^2$$`.
 * Instead of `|`, use `\vert`.
+
+You can add tags by adding these three lines to the top of a page:
+```
+---
+tags: [QAOA, variational-algorithms]
+---
+```
 
 Top 5 contributors:
 <ul>
