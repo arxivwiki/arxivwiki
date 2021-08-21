@@ -39,9 +39,6 @@ async function getDataFromArxiv(id) {
             document.getElementById("paper_authors").innerText = output.authors;
         }
 
-        details = `<a href="https://arxiv.org/abs/${encodeURI(id)}" target="_blank">https://arxiv.org/abs/${encodeURI(id)}</p>`;
-        document.getElementById("paper_details").innerHTML = details;
-
         document.getElementById("summarizer").style.display = "";
         document.getElementById("summarizer").style.height = "55px";
         document.getElementById("summarizer").style.overflow = "hidden";

@@ -55,7 +55,7 @@ a:hover, a:focus {
 .editbutton {
     float:right;
     margin-left: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .linkbutton {
