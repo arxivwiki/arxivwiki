@@ -1,7 +1,7 @@
-### Welcome to the arXiv wiki
+## Welcome to the arXiv wiki
 A collaborative compilation of notes and summaries on [arXiv.org](url) papers.
 
-How to use: Visit any paper on www.arXiv.org. Swap out the “.org” for “.wiki” and you will automatically be taken to the corresponding arXiv wiki page.
+How to use: Visit any paper on [www.arXiv.org](url). Swap out the “.org” for “.wiki” and you will automatically be taken to the corresponding arXiv wiki page.
 
 
 #### Anything that could accompany an arXiv paper belongs here
@@ -22,7 +22,7 @@ How to use: Visit any paper on www.arXiv.org. Swap out the “.org” for “.wi
 
 Want more? [View all papers on the arXiv.wiki](/all).
 
-### Contributing
+## Contributing
 
 If you'd like to contribute, search by an arXiv identifier, and click the "Edit this page" button. You must log into GitHub to make edits. Once your first change is approved, you'll receive access to make further changes and invite others.
 
