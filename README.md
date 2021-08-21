@@ -1,18 +1,17 @@
-### Welcome to the arXiv wiki
-A collaborative compilation of notes and summaries on [arXiv.org](url) papers.
+Welcome to the arXiv wiki: a place to share notes and summaries on arXiv.org papers.
 
-How to use: Visit any paper on [www.arXiv.org](url). Swap out the “.org” for “.wiki” and you will automatically be taken to the corresponding arXiv wiki page.
+Visit any paper on arXiv.org. Swap out the “.org” for “.wiki” and you will automatically be taken to the corresponding arXiv wiki page.
 
-
-#### Anything that could accompany an arXiv paper belongs here
+Anything that could accompany an arXiv paper belongs here:
 
 * a high-level summary
 * links to talks and presentations
 * informal explanations of core concepts
 * comments
 
+---
 
-#### Recently updated papers
+Recently updated papers
 <ul>
 {% for member in site.data.recent limit:5 %}
 {% capture short_id %}{{ member.id | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
