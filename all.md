@@ -1,4 +1,3 @@
-All papers on the arXiv.wiki:
 
 <ul>
 {% for member in site.data.all %}
