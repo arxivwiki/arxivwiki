@@ -22,11 +22,12 @@ Recently updated papers:
 
 <p>
 {% assign tagpages = site.pages | where:"dir", "/tag/" %}
-View papers by tag: <span>{% for p in tagpages %}
+View papers by tag:
+<div>{% for p in tagpages %}
 {% assign tag_name = p.name | remove_first: '.md'%}
-- <code><a href="/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr></a>&nbsp;</code>
+<code><a href="https://arxiv.wiki/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr></a>&nbsp;</code>
 {% endfor %}
-</span>
+</div>
 </p>
 
 Want more? [View all papers on the arXiv.wiki](https://arxiv.wiki/all).
