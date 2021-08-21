@@ -1,4 +1,4 @@
-name: recent
+name: do_automatic_things
 on:
   push:
     branches: [ main ]
@@ -28,5 +28,12 @@ jobs:
       - name: get contributors
         run: |
           curl https://api.github.com/repos/arxivwiki/arxivwiki/contributors | jq .[].login | sed 's/"//g' >> _data/contributors.csv
-
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm i node-fetch
+      - run: node getFromArxiv.js
+      - run: rm -rf node_modules/
       - uses: stefanzweifel/git-auto-commit-action@v4
