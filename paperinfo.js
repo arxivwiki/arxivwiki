@@ -42,7 +42,6 @@ async function getDataFromArxiv(id) {
         details = `<a href="https://arxiv.org/abs/${encodeURI(id)}" target="_blank">https://arxiv.org/abs/${encodeURI(id)}</p>`;
         document.getElementById("paper_details").innerHTML = details;
 
-        document.getElementsByTagName("iframe")[0].src = "https://scitldr.apps.allenai.org/?q=" + encodeURIComponent(document.getElementById("paper_abstract").innerText);
         document.getElementById("summarizer").style.display = "";
         document.getElementById("summarizer").style.height = "52px";
         document.getElementById("summarizer").style.overflow = "hidden";
@@ -50,6 +49,10 @@ async function getDataFromArxiv(id) {
 })()
 
 document.getElementById("summarizerbutton").onclick = function() {
+    if (!(document.getElementsByTagName("iframe")[0].src || "").startsWith("https://scitldr.apps.allenai.org")) {
+        document.getElementsByTagName("iframe")[0].src = "https://scitldr.apps.allenai.org/?q=" + encodeURIComponent(document.getElementById("paper_abstract").innerText);
+    }
+
     let buttonText = this.innerText;
     let div = document.getElementById("summarizer");
     if (buttonText.indexOf("use") !== -1) {
