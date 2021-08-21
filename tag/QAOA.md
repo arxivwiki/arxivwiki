@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: qaoa"
-tag: qaoa
+title: "Tag: QAOA"
+tag: QAOA
 robots: noindex
 ---
