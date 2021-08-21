@@ -20,7 +20,7 @@ Recently updated papers:
 {% endfor %}
 </ul>
 
-Want more? [View all papers on the arXiv.wiki](/all).
+Want more? [View all papers on the arXiv.wiki](https://arxiv.wiki/all).
 
 ---
 
