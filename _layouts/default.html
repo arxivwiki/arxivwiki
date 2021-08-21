@@ -45,6 +45,16 @@
       </div>
     </div>
 
+    {% if page.tags %}
+    <br/>
+    <hr/>
+    <div><span>tags:
+      {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        - <a href="/tag/{{ tag_name }}"><code><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+        {% endfor %}
+        {% endif %}
+    </span></div>
   </div>
   <script src="{{ "paperinfo.js" | relative_url }}"></script>
   <script src="{{ "githublink.js" | relative_url }}"></script>
@@ -58,10 +68,10 @@
     allPages.push("{{ member.id }}")
   </script>
 {% endfor %}
-<script>
-    link = allPages[Math.floor(Math.random() * allPages.length)];
-    document.getElementById("randomlink").href = "/" + link;
-    </script>
+  <script>
+      link = allPages[Math.floor(Math.random() * allPages.length)];
+      document.getElementById("randomlink").href = "/" + link;
+  </script>
 </body>
 
 </html>
