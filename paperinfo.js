@@ -25,8 +25,9 @@ async function getDataFromArxiv(id) {
 }
 
 (async () => {
-    if (window.location.pathname.indexOf(("/abs/")) !== -1) {
-        document.getElementById("paper_info").style.display = "";
+    if (window.location.pathname.indexOf(("/abs/")) === -1) {
+        document.getElementById("paper_info").style.display = "none";
+    } else {
         const id = window.location.pathname.split('/abs/')[1];
 
         if (document.getElementById("paper_title").innerText) {
