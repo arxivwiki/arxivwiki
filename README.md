@@ -12,7 +12,7 @@ How to use: Visit any paper on [www.arXiv.org](url). Swap out the “.org” for
 * comments
 
 
-Recently updated papers
+#### Recently updated papers
 <ul>
 {% for member in site.data.recent limit:5 %}
 {% capture short_id %}{{ member.id | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
