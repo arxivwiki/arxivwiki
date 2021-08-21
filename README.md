@@ -4,7 +4,7 @@ A collaborative compilation of notes and summaries on [arXiv.org](url) papers.
 How to use: Visit any paper on www.arXiv.org. Swap out the “.org” for “.wiki” and you will automatically be taken to the corresponding arXiv wiki page.
 
 
-#### Anything that could accompany an arXiv paper belongs here:
+#### Anything that could accompany an arXiv paper belongs here
 
 * a high-level summary
 * links to talks and presentations
