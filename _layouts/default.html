@@ -27,6 +27,7 @@
       {% if page.dir == '/abs/' %}
       {% capture var %}{% endcapture %}
       {% endif %}
+      <p id="loadingpane" style="display:none">Loading...</p>
       <div style="{{var}}" id="paper_info">
         {% capture arxiv_id %}{{page.path | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
           <h1 id="paper_title">{{site.data.arxivdata[arxiv_id].title}}</h1>
@@ -40,7 +41,7 @@
       {{ content }}
     </div>
 
-    <div id='summarizer' style="display: none">
+    <div id='summarizer' style="height: 55px; overflow: hidden; {{var}}">
       <hr/>
       <p><button id='summarizerbutton'>Click to use automatic abstract summarizer</button></p>
       <p>To use, scroll down and press the Submit button for a one-sentence summary of the abstract.</p>

@@ -27,22 +27,26 @@ async function getDataFromArxiv(id) {
 (async () => {
     if (window.location.pathname.indexOf(("/abs/")) === -1) {
         // don't request from arxiv if we aren't on a paper
-    } else {
-        const id = window.location.pathname.split('/abs/')[1];
-
-        if (document.getElementById("paper_title").innerText) {
-            // we already have this data, no need to go to arxiv
-        } else {
-            const output = await getDataFromArxiv(id);
-            document.getElementById("paper_title").innerText = output.title;
-            document.getElementById("paper_abstract").innerText = output.abstract;
-            document.getElementById("paper_authors").innerText = output.authors;
-        }
-
-        document.getElementById("summarizer").style.display = "";
-        document.getElementById("summarizer").style.height = "55px";
-        document.getElementById("summarizer").style.overflow = "hidden";
+        return;
     }
+
+    const id = window.location.pathname.split('/abs/')[1];
+    if (document.getElementById("paper_title").innerText) {
+        // we already have this data, no need to go to arxiv
+        return;
+    }
+
+    document.getElementById("loadingpane").style.display = "";
+    const output = await getDataFromArxiv(id);
+    document.getElementById("paper_title").innerText = output.title;
+    document.getElementById("paper_abstract").innerText = output.abstract;
+    document.getElementById("paper_authors").innerText = output.authors;
+    document.getElementById("loadingpane").style.display = "none";
+    document.getElementById("paper_info").style.display = "";
+    details = `<a href="https://arxiv.org/abs/${encodeURI(id)}" target="_blank">https://arxiv.org/abs/${encodeURI(id)}</p>`;
+    document.getElementById("paper_details").innerHTML = details;
+    document.getElementById("summarizer").style.display = "";
+
 })()
 
 document.getElementById("summarizerbutton").onclick = function() {
@@ -60,5 +64,3 @@ document.getElementById("summarizerbutton").onclick = function() {
         this.innerText = buttonText.replaceAll("hide", "use");
     }
 }
-
-document.getElementById("summarizerbutton").style.cursor = "pointer";
