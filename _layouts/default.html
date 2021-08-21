@@ -21,11 +21,12 @@
     </div>
 
     <div>
-      <div style="display: none" id="paper_info">
-          <h1 id="paper_title"></h1>
-          <p id="paper_authors"><em>Loading...</em></p>
-          <p id="paper_details"></p>
-          <p id="paper_abstract" style="display: none"></p>
+      <div id="paper_info">
+        {% capture arxiv_id %}{{page.path | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
+          <h1 id="paper_title">{{site.data.arxivdata[arxiv_id].title}}</h1>
+          <p id="paper_authors">{{site.data.arxivdata[arxiv_id].authors}}</p>
+          <p id="paper_details"><em>Loading...</em></p>
+          <p id="paper_abstract" style="display: none">{{site.data.arxivdata[arxiv_id].abstract}}</p>
           <hr />
           {% capture full_url %}{{ site.github.repository_url }}{{ page.urlsuffix | default: "/edit/main/" }}{% endcapture %}
           <button class="view"><a id="githublink" target="_blank" href="{{ full_url }}">✍️ Edit this page</a></button>
@@ -34,7 +35,6 @@
     </div>
 
     <div id='summarizer' style="display: none">
-      <!-- <br/> -->
       <hr/>
       <button id='summarizerbutton'>Click to use automatic abstract summarizer</button> (by <a href="https://scitldr.apps.allenai.org/about" target="_blank">Allen AI</a>)
       <p>To use, scroll down and press the Submit button for a one-sentence summary of the abstract.</p>
