@@ -21,7 +21,7 @@ jobs:
           echo "id" > _data/all.csv
       - name: get all files
         run: |
-          find abs/* | grep .md | sed 's/.md//' >> _data/all.csv
+          find abs/* | grep .md | sed 's/.md//' | sort -k2 -t/ -n -r >> _data/all.csv
       - name: set up contributors.csv
         run: |
           echo "id" > _data/contributors.csv
