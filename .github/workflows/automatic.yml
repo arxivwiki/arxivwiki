@@ -21,7 +21,11 @@ jobs:
           echo "id" > _data/all.csv
       - name: get all files
         run: |
-          find abs/* | grep .md | sed 's/.md//' | sort -k2 -t/ -n -r >> _data/all.csv
+          find abs/* | grep .md | sed 's/.md//' | sort -k2 -t/ -n -r > tmp.csv
+          cat tmp.csv | grep 'abs/[0-8]' | sort -k2 -t/ -r >> _data/all.csv
+          cat tmp.csv | grep 'abs/.*/[0-8]' | sort -k3 -t/ -r >> _data/all.csv
+          cat tmp.csv | grep 'abs/.*/9' | sort -k3 -t/ -r >> _data/all.csv
+          rm tmp.csv
       - name: set up contributors.csv
         run: |
           echo "id" > _data/contributors.csv
