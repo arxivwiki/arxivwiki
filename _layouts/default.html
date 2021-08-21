@@ -24,7 +24,8 @@
 
     <div>
       {% capture var %}display:none{% endcapture %}
-      {% if page.dir == '/abs/' %}
+      {% capture pagedirshort %}{{page.dir | truncate: 5, ''}}{% endcapture %}
+      {% if pagedirshort == '/abs/' %}
       {% capture var %}{% endcapture %}
       {% endif %}
       <p id="loadingpane" style="display:none">Loading...</p>
