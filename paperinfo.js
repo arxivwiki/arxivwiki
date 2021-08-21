@@ -26,7 +26,7 @@ async function getDataFromArxiv(id) {
 
 (async () => {
     if (window.location.pathname.indexOf(("/abs/")) === -1) {
-        document.getElementById("paper_info").style.display = "none";
+        // don't request from arxiv if we aren't on a paper
     } else {
         const id = window.location.pathname.split('/abs/')[1];
 

@@ -23,7 +23,11 @@
     </div>
 
     <div>
-      <div id="paper_info">
+      {% capture var %}display:none{% endcapture %}
+      {% if page.dir == '/abs/' %}
+      {% capture var %}{% endcapture %}
+      {% endif %}
+      <div style="{{var}}" id="paper_info">
         {% capture arxiv_id %}{{page.path | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
           <h1 id="paper_title">{{site.data.arxivdata[arxiv_id].title}}</h1>
           <p id="paper_authors">{{site.data.arxivdata[arxiv_id].authors}}</p>
