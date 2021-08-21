@@ -46,7 +46,7 @@ Files also support LaTeX math mode:
 You can add tags by adding these three lines to the top of a page:
 ```
 ---
-tags: [QAOA, variational-algorithms]
+tags: [QAOA, local-algorithms]
 ---
 ```
 
