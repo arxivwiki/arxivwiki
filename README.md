@@ -1,15 +1,19 @@
-Welcome to the arXiv wiki. Anything that could accompany an arXiv paper belongs here:
+### Welcome to the arXiv wiki
+A collaborative compilation of notes and summaries on [arXiv.org](url) papers.
+
+### How to use:
+Visit any paper on www.arXiv.org. Swap out the “.org” for “.wiki” and you will automatically be taken to the corresponding arXiv wiki page.
+
+
+### Anything that could accompany an arXiv paper belongs here:
 
 * a high-level summary
 * links to talks and presentations
 * informal explanations of core concepts
 * comments
 
-I hope this becomes a useful resource for all kinds of researchers, especially those getting started in a new field.
 
-<p><button id="randompage">Visit a random page</button></p>
-
-Recently updated papers:
+### Recently updated papers:
 <ul>
 {% for member in site.data.recent limit:5 %}
 {% capture short_id %}{{ member.id | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
@@ -21,7 +25,7 @@ Want more? [View all papers on the arXiv.wiki](/all).
 
 ### Contributing
 
-If you'd like to contribute, search by an arXiv identifier, and click the "Edit this page" button. I use GitHub to manage accounts. Once your first change is approved, you'll receive access to make further changes and invite others.
+If you'd like to contribute, search by an arXiv identifier, and click the "Edit this page" button. You must log into GitHub to make edits. Once your first change is approved, you'll receive access to make further changes and invite others.
 
 When writing, both LaTeX math mode (with \$\$) and Markdown are supported.
 
