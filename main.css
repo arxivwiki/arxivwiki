@@ -35,20 +35,31 @@ a:hover, a:focus {
 
 #search_input {
     width:100%;
+    font-size: 16px;
 }
+
+#allpapers, .randomdiv {
+    float: right;
+    padding-top: 7px;
+    padding-right: 20px;
+}
+
 
 #searchbar {
     float: right;
-    min-width: 15%;
-    max-width: 300px;
-    padding-top: 10px;
+    min-width: 5%;
+    max-width: 120px;
+    padding-top: 7px;
 }
 
-.view {
+.editbutton {
     float:right;
-    font-size: 16px;
     margin-left: 16px;
     margin-bottom: 16px;
+}
+
+.linkbutton {
+    font-size: 16px;
 }
 
 .header {
@@ -66,8 +77,4 @@ hr {
 
 #summarizerbutton {
     font-size: 16px;
-}
-
-#randompage {
-    cursor: pointer;
 }

@@ -17,7 +17,9 @@
   <div class="wrapper">
     <div class="header">
       <a id="titlelink" href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a>
-      <div id="searchbar"><input type="search" id="search_input" placeholder="Search by arXiv identifier"/></div>
+      <div id="searchbar"><input type="search" id="search_input" placeholder="search"/></div>
+      <div id="allpapers"><button class="linkbutton"><a href="{{ "/all" | absolute_url }}">All papers</a></button></div>
+      <div class="randomdiv"><button class="linkbutton" id="randompage"><a href="/abs/2101.05513">Random</a></button></div>
     </div>
 
     <div>
@@ -29,7 +31,7 @@
           <p id="paper_abstract" style="display: none">{{site.data.arxivdata[arxiv_id].abstract}}</p>
           <hr />
           {% capture full_url %}{{ site.github.repository_url }}{{ page.urlsuffix | default: "/edit/main/" }}{% endcapture %}
-          <button class="view"><a id="githublink" target="_blank" href="{{ full_url }}">✍️ Edit this page</a></button>
+          <button class="linkbutton editbutton"><a id="githublink" target="_blank" href="{{ full_url }}">✍️ Edit this page</a></button>
       </div>
       {{ content }}
     </div>
