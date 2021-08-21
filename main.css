@@ -64,6 +64,10 @@ hr {
     padding-top: 30px;
 }
 
+#summarizerbutton {
+    font-size: 16px;
+}
+
 #randompage {
     cursor: pointer;
 }

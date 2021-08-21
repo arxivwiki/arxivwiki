@@ -43,7 +43,7 @@ async function getDataFromArxiv(id) {
         document.getElementById("paper_details").innerHTML = details;
 
         document.getElementById("summarizer").style.display = "";
-        document.getElementById("summarizer").style.height = "52px";
+        document.getElementById("summarizer").style.height = "55px";
         document.getElementById("summarizer").style.overflow = "hidden";
     }
 })()
@@ -59,7 +59,7 @@ document.getElementById("summarizerbutton").onclick = function() {
         div.style.height = 'auto';
         this.innerText = buttonText.replaceAll("use", "hide");
     } else {
-        div.style.height = '52px';
+        div.style.height = '55px';
         this.innerText = buttonText.replaceAll("hide", "use");
     }
 }
