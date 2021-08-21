@@ -16,7 +16,8 @@ I hope this becomes a useful resource for all kinds of researchers, especially t
 Recently updated papers:
 <ul>
 {% for member in site.data.recent limit:5 %}
-<li><a href="/{{ member.id }}">{{ member.id }}</a></li>
+{% capture short_id %}{{ member.id | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
+<li><a href="/{{ member.id }}">{{ short_id }}</a>: {{site.data.arxivdata[short_id].title}}</li>
 {% endfor %}
 </ul>
 
