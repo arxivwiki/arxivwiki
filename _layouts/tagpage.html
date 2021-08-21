@@ -2,12 +2,14 @@
 layout: default
 ---
 <div>
+{% capture lowerpagetag %}{{ page.tag | downcase }}{% endcapture %}
 <h1>Tag: {{ page.tag }}</h1>
 <ul>
     {% for p in site.pages %}
     {% capture short_id %}{{p.name | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
     {% for tag in p.tags %}
-    {% if tag == page.tag %}
+    {% capture lowerptag %}{{tag | downcase}}{% endcapture %}
+    {% if lowerptag == lowerpagetag %}
         <li><a href="/abs/{{ short_id }}">{{ short_id }}</a>: {{site.data.arxivdata[short_id].title}}</li>
     {% endif %}
     {% endfor %}
