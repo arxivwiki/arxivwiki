@@ -41,4 +41,5 @@ jobs:
       - run: rm -rf node_modules/
       - run: rm -rf package.json
       - run: rm -rf package-lock.json
+      - run: python tag_generator.py
       - uses: stefanzweifel/git-auto-commit-action@v4
