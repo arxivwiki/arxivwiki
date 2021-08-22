@@ -11,6 +11,8 @@ Anything that could accompany an arXiv paper belongs here:
 
 ---
 
+### Explore
+
 Recently updated papers:
 
 <ul>
