@@ -63,9 +63,7 @@ a:hover, a:focus {
 }
 
 .editbutton {
-    float:right;
-    margin-left: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .linkbutton {
