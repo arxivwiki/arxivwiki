@@ -38,7 +38,7 @@ Want more? [View all papers on the arXiv.wiki](https://arxiv.wiki/all).
 
 If you'd like to contribute, search by an arXiv identifier, and click the "Edit this page" button. You must log into GitHub to make edits. Once your first change is approved, you'll receive access to make further changes.
 
-Please remember there are real human beings who wrote every paper on the arXiv. Please be civil and respectful online. Hate speech will not be tolerated.
+Please remember each paper on the arXiv was written by someone. Please be civil and respectful online.
 
 Files are written in Markdown. It is regular text with extra styling. Here is a [2-minute reference on how to use it](https://www.markdownguide.org/cheat-sheet).
 
