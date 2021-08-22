@@ -57,7 +57,7 @@ document.getElementById("summarizerbutton").onclick = function() {
     let buttonText = this.innerText;
     let div = document.getElementById("summarizer");
     if (buttonText.indexOf("use") !== -1) {
-        div.style.display = '';
+        div.style.display = 'inherit';
         this.innerText = buttonText.replaceAll("use", "hide");
     } else {
         div.style.display = 'none';
