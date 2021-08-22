@@ -44,18 +44,20 @@
       {{ content }}
     </div>
 
-    <div id='summarizer' style="height: 55px; overflow: hidden; {{var}}">
+    <div id="summarizercontrol" style="{{var}}">
       <hr/>
       <p><button id='summarizerbutton'>Click to use automatic abstract summarizer</button></p>
-      <br/>
+    </div>
+
+    <div id='summarizer' style="display: none; {{var}}">
       <p>To use, scroll down and press the Submit button for a one-sentence summary of the abstract.</p>
       <div style="overflow: hidden; border: 1px solid black; width: 100%; height: 500px">
           <iframe src="" frameborder="0"  style="width:100%; height:100%; overflow-x:hidden;"></iframe>
       </div>
+      <br/>
     </div>
 
     {% if page.tags %}
-    <br/>
     <hr/>
     <div><span>tags:
       {% for tag in page.tags %}

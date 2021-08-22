@@ -38,6 +38,7 @@ async function getDataFromArxiv(id) {
 
     document.getElementById("loadingpane").style.display = "";
     const output = await getDataFromArxiv(id);
+
     document.getElementById("paper_title").innerText = output.title;
     document.getElementById("paper_abstract").innerText = output.abstract;
     document.getElementById("paper_authors").innerText = output.authors;
@@ -45,8 +46,7 @@ async function getDataFromArxiv(id) {
     document.getElementById("paper_info").style.display = "";
     details = `<a href="https://arxiv.org/abs/${encodeURI(id)}" target="_blank">https://arxiv.org/abs/${encodeURI(id)}</p>`;
     document.getElementById("paper_details").innerHTML = details;
-    document.getElementById("summarizer").style.display = "";
-
+    document.getElementById("summarizercontrol").style.display = "";
 })()
 
 document.getElementById("summarizerbutton").onclick = function() {
@@ -57,10 +57,10 @@ document.getElementById("summarizerbutton").onclick = function() {
     let buttonText = this.innerText;
     let div = document.getElementById("summarizer");
     if (buttonText.indexOf("use") !== -1) {
-        div.style.height = 'auto';
+        div.style.display = '';
         this.innerText = buttonText.replaceAll("use", "hide");
     } else {
-        div.style.height = '55px';
+        div.style.display = 'none';
         this.innerText = buttonText.replaceAll("hide", "use");
     }
 }
