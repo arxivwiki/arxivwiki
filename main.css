@@ -47,7 +47,7 @@ a:hover, a:focus {
 }
 
 #allpapers .linkbutton {
-    min-width: 96px;
+    min-width: 48px;
     height: 100%;
 }
 
@@ -59,10 +59,11 @@ a:hover, a:focus {
     flex: 4;
     display: inherit;
     margin-bottom: 8px;
+    justify-content: right;
 }
 
 #searchbar {
-    min-width: 50px;
+    min-width: 60px;
     max-width: 120px;
     padding-top: 7px;
 }

@@ -11,9 +11,7 @@ Anything that could accompany an arXiv paper belongs here:
 
 ---
 
-### Explore
-
-Recently updated papers:
+### Recently updated
 
 <ul>
 {% for member in site.data.recent limit:5 %}
@@ -22,9 +20,14 @@ Recently updated papers:
 {% endfor %}
 </ul>
 
+---
+
+### View papers by tag
+
+Every paper can be marked with one or more tags.
+
 <p>
 {% assign tagpages = site.pages | where:"dir", "/tag/" %}
-View papers by tag:
 <div>{% for p in tagpages %}
 {% assign tag_name = p.name | remove_first: '.md'%}
 <code><a href="https://arxiv.wiki/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr></a>&nbsp;</code>
@@ -32,13 +35,11 @@ View papers by tag:
 </div>
 </p>
 
-Want more? [View all papers on the arXiv.wiki](https://arxiv.wiki/all).
-
 ---
 
-### Contributing
+### How to contribute
 
-If you'd like to contribute, search by an arXiv identifier, and click the "Edit this page" button. You must log into GitHub to make edits. Once your first change is approved, you'll receive access to make further changes.
+Search an arXiv identifier and click the "Edit this page" button. You must log into GitHub to make edits. Once your first change is approved, you'll receive access to make further changes.
 
 Please remember each paper on the arXiv was written by someone. Please be civil and respectful online.
 
@@ -48,14 +49,10 @@ Files also support LaTeX math mode:
 * Wrap equations with \$\$ on each side, like `$$y = x^2$$`.
 * Instead of `|`, use `\vert`.
 
-You can add tags by adding these three lines to the top of a page:
-```
 ---
-tags: [QAOA, local-algorithms]
----
-```
 
-Top 5 contributors:
+### Top 5 contributors
+
 <ul>
 {% for c in site.data.contributors limit:5 %}
 <li><a target="_blank" href="https://github.com/{{ c.id }}">{{ c.id }}</a></li>
