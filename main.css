@@ -68,7 +68,8 @@ a:hover, a:focus {
     padding-top: 7px;
 }
 
-.editbutton {
+.linkbutton.editbutton {
+    font-size: 12px;
     margin-bottom: 20px;
 }
 
@@ -107,6 +108,6 @@ hr {
 }
 
 #summarizerbutton {
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
 }
