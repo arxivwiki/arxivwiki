@@ -35,11 +35,6 @@ a:hover, a:focus {
     color: #8d10c6;
 }
 
-#allpapers li {
-    text-indent: -30px;
-    padding-left: 30px;
-}
-
 #search_input {
     width:100%;
     font-size: 12px;
