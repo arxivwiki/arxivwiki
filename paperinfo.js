@@ -25,12 +25,16 @@ async function getDataFromArxiv(id) {
 }
 
 (async () => {
-    if (window.location.pathname.indexOf(("/abs/")) === -1) {
+    let id = '';
+    if (window.location.pathname.indexOf(("/pdf/")) !== -1) {
+        // if pdf url, get correct id
+        id = window.location.pathname.split('/pdf/')[1].split('.pdf')[0];
+    } else if (window.location.pathname.indexOf(("/abs/")) === -1) {
         // don't request from arxiv if we aren't on a paper
         return;
+    }  else {
+        id = window.location.pathname.split('/abs/')[1];
     }
-
-    const id = window.location.pathname.split('/abs/')[1];
     if (document.getElementById("paper_title").innerText) {
         // we already have this data, no need to go to arxiv
         return;
