@@ -3,3 +3,5 @@ title: arXiv.wiki
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+plugins:
+  - jekyll-redirect-from
