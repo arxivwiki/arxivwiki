@@ -42,7 +42,7 @@
           <p id="paper_abstract" style="display: none">{{site.data.arxivdata[arxiv_id].abstract}}</p>
           <hr />
           {% capture full_url %}{{ site.github.repository_url }}{{ page.urlsuffix | default: "/edit/main/" }}{% endcapture %}
-          <button class="linkbutton editbutton"><a id="githublink" target="_blank" href="{{ full_url }}">✍️ Edit this page</a></button>
+          <button class="linkbutton editbutton"><a id="githublink" href="{{ full_url }}">✍️ Edit this page</a></button>
       </div>
       {{ content }}
     </div>
@@ -85,6 +85,12 @@
   <script>
       link = allPages[Math.floor(Math.random() * allPages.length)];
       document.getElementById("randomlink").href = "/" + link;
+
+      // fix link buttons
+      var linkbuttons = document.getElementsByClassName("linkbutton");
+      for (let idx = 0; idx < linkbuttons.length; idx++) {
+          linkbuttons[idx].onclick = () => {window.location.href = linkbuttons[idx].children[0].href;}
+      }
   </script>
 </body>
 
