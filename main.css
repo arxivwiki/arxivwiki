@@ -111,3 +111,11 @@ hr {
     font-size: 12px;
     cursor: pointer;
 }
+
+#scirate {
+    float:right;
+}
+
+#paper_details {
+    display: inline-block;
+}
