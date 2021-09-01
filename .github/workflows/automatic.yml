@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm i node-fetch
+      - run: npm i node-fetch@2.6.1
       - run: node getFromArxiv.js
       - run: rm -rf node_modules/
       - run: rm -rf package.json
