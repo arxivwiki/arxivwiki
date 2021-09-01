@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const fs = require('fs').promises;
+import fetch from 'node-fetch';
+import { promises as fs } from 'fs';
 
 async function getDataFromArxiv(id) {
     const response = await fetch('https://export.arxiv.org/api/query?id_list=' + id);
