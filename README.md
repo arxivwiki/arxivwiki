@@ -13,12 +13,15 @@ Anything that could accompany an arXiv paper belongs here:
 
 ### Recently updated
 
-<ul>
+<div style="margin-bottom: 10px;">
 {% for member in site.data.recent limit:5 %}
 {% capture short_id %}{{ member.id | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
-<li><a href="/{{ member.id }}">{{ short_id }}</a>: {{site.data.arxivdata[short_id].title}}</li>
+<div class="linktopage">
+<div><a href="/abs/{{short_id}}"><b>{{site.data.arxivdata[short_id].title}}</b></a></div>
+<div><i>{{site.data.arxivdata[short_id].authors}}</i></div>
+</div>
 {% endfor %}
-</ul>
+</div>
 
 ---
 

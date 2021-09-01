@@ -103,6 +103,11 @@ a:hover, a:focus {
     justify-content: center;
 }
 
+.linktopage {
+    margin: 0 10px 0 10px;
+    padding: 10px;
+}
+
 hr {
     clear: right;
 }

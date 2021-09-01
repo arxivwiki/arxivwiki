@@ -4,7 +4,7 @@ layout: default
 <div>
 {% capture lowerpagetag %}{{ page.tag | downcase }}{% endcapture %}
 <h1>Tag: {{ page.tag }}</h1>
-<ul>
+<div>
     {% for member in site.data.all %}
     {% capture short_id %}{{ member.id | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
     {% capture id_with_md %}{{ short_id | append: '.md'}}{% endcapture %}
@@ -12,9 +12,12 @@ layout: default
     {% for tag in p.tags %}
     {% capture lowerptag %}{{tag | downcase}}{% endcapture %}
     {% if lowerptag == lowerpagetag %}
-        <li><a href="/abs/{{ short_id }}">{{ short_id }}</a>: {{site.data.arxivdata[short_id].title}}</li>
+        <div class="linktopage">
+        <div><a href="/abs/{{short_id}}"><b>{{site.data.arxivdata[short_id].title}}</b></a></div>
+        <div><i>{{site.data.arxivdata[short_id].authors}}</i></div>
+        </div>
     {% endif %}
     {% endfor %}
 {% endfor %}
-</ul>
+</div>
 </div>
