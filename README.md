@@ -18,7 +18,7 @@ Anything that could accompany an arXiv paper belongs here:
 {% capture short_id %}{{ member.id | remove_first: 'abs/' | remove_first: '.md'}}{% endcapture %}
 <div class="linktopage">
 <div><a href="/abs/{{short_id}}"><b>{{site.data.arxivdata[short_id].title}}</b></a></div>
-<div><i>{{site.data.arxivdata[short_id].authors}}</i></div>
+<div>{{site.data.arxivdata[short_id].authors}}</div>
 </div>
 {% endfor %}
 </div>

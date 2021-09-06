@@ -14,7 +14,7 @@ layout: default
     {% if lowerptag == lowerpagetag %}
         <div class="linktopage">
         <div><a href="/abs/{{short_id}}"><b>{{site.data.arxivdata[short_id].title}}</b></a></div>
-        <div><i>{{site.data.arxivdata[short_id].authors}}</i></div>
+        <div>{{site.data.arxivdata[short_id].authors}}</div>
         </div>
     {% endif %}
     {% endfor %}
