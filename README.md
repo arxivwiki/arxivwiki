@@ -61,3 +61,11 @@ Files also support LaTeX math mode:
 <li><a target="_blank" href="https://github.com/{{ c.id }}">{{ c.id }}</a></li>
 {% endfor %}
 </ul>
+
+---
+
+### License
+
+Except where otherwise noted, the original content in this website can be
+shared, remixed, and reused under the terms of the
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) License.
