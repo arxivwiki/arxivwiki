@@ -9,7 +9,7 @@ Anything that could accompany an arXiv paper belongs here:
 * informal explanations of core concepts
 * comments
 
-See a list of all papers on arXiv.wiki by clicking the "All" button.
+See a list of all annotated papers by clicking the "All" button.
 Click the "Random" button to find something new.
 
 
