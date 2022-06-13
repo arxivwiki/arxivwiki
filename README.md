@@ -10,7 +10,7 @@ Anything that could accompany an arXiv paper belongs here:
 * comments
 
 See a list of all papers on arXiv.wiki by clicking the "All" button.
-Want to find something new? Click the "Random" button.
+Click the "Random" button to find something new.
 
 
 ---
