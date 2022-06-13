@@ -9,6 +9,10 @@ Anything that could accompany an arXiv paper belongs here:
 * informal explanations of core concepts
 * comments
 
+See a list of all papers on arXiv.wiki by clicking the "All" button.
+Want to find something new? Click the "Random" button.
+
+
 ---
 
 ### Recently updated
