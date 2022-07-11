@@ -2,6 +2,6 @@
 layout: tagpage
 title: "Tag: noise"
 tag: noise
-count: 1
+count: 2
 robots: noindex
 ---
