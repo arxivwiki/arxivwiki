@@ -15,7 +15,7 @@ from collections import Counter
 post_dir = 'abs/'
 tag_dir = 'tag/'
 
-filenames = glob.glob(post_dir + '*md')
+filenames = glob.glob(post_dir + '*md') + glob.glob(post_dir + '**/*md')
 
 total_tags = []
 for filename in filenames:
