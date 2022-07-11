@@ -34,10 +34,10 @@ Click the "Random" button to find something new.
 Every paper can be marked with one or more tags.
 
 <p>
-{% assign tagpages = site.pages | where:"dir", "/tag/" %}
+{% assign tagpages = site.pages | where:"dir", "/tag/" | sort: 'count' | reverse %}
 <div>{% for p in tagpages %}
 {% assign tag_name = p.name | remove_first: '.md'%}
-<code><a href="https://arxiv.wiki/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr></a>&nbsp;</code>
+<code><a href="https://arxiv.wiki/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr></a>&nbsp;({{ p.count }})</code><br/>
 {% endfor %}
 </div>
 </p>
