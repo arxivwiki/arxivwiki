@@ -20,7 +20,7 @@
       <div id="rightsideheader">
       <div class="randomdiv"><button class="linkbutton" id="randompage"><a id="randomlink">Random</a></button></div>
       <div id="allpapers"><button class="linkbutton"><a href="{{ "/all" | absolute_url }}">All</a></button></div>
-      <div id="searchbar"><input type="search" id="search_input" placeholder="arXiv ID"/></div>
+      <div id="searchbar"><input type="search" id="search_input" placeholder="arXiv ID or link"/></div>
     </div>
     </div>
 
@@ -45,19 +45,6 @@
           <button class="linkbutton editbutton"><a id="githublink" href="{{ full_url }}">✍️ Edit this page</a></button>
       </div>
       {{ content }}
-    </div>
-
-    <div id="summarizercontrol" style="{{var}}">
-      <hr/>
-      <p><button id='summarizerbutton'>Click to use automatic abstract summarizer</button></p>
-    </div>
-
-    <div id="summarizer" style="display: none">
-      <p>To use, scroll down and press the Submit button for a one-sentence summary of the abstract.</p>
-      <div style="overflow: hidden; border: 1px solid black; width: 100%; height: 500px">
-          <iframe src="" frameborder="0"  style="width:100%; height:100%; overflow-x:hidden;"></iframe>
-      </div>
-      <br/>
     </div>
 
     {% if page.tags %}

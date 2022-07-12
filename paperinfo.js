@@ -50,21 +50,4 @@ async function getDataFromArxiv(id) {
     document.getElementById("paper_info").style.display = "";
     details = `<a href="https://arxiv.org/abs/${encodeURI(id)}" target="_blank">https://arxiv.org/abs/${encodeURI(id)}</p>`;
     document.getElementById("paper_details").innerHTML = details;
-    document.getElementById("summarizercontrol").style.display = "";
 })()
-
-document.getElementById("summarizerbutton").onclick = function() {
-    if (!(document.getElementsByTagName("iframe")[0].src || "").startsWith("https://scitldr.apps.allenai.org")) {
-        document.getElementsByTagName("iframe")[0].src = "https://scitldr.apps.allenai.org/?q=" + encodeURIComponent(document.getElementById("paper_abstract").innerText);
-    }
-
-    let buttonText = this.innerText;
-    let div = document.getElementById("summarizer");
-    if (buttonText.indexOf("use") !== -1) {
-        div.style.display = 'inherit';
-        this.innerText = buttonText.replaceAll("use", "hide");
-    } else {
-        div.style.display = 'none';
-        this.innerText = buttonText.replaceAll("hide", "use");
-    }
-}
