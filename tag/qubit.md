@@ -1,7 +1,7 @@
 ---
 layout: tagpage
-title: "Tag: example2"
-tag: example2
+title: "Tag: qubit"
+tag: qubit
 count: 1
 robots: noindex
 ---
