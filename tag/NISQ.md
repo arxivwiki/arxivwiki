@@ -2,6 +2,6 @@
 layout: tagpage
 title: "Tag: NISQ"
 tag: NISQ
-count: 11
+count: 12
 robots: noindex
 ---
